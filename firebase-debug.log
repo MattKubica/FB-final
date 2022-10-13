@@ -1,0 +1,65 @@
+[debug] [2022-10-13T14:12:16.886Z] ----------------------------------------------------------------------
+[debug] [2022-10-13T14:12:16.889Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\19mat\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-10-13T14:12:16.889Z] CLI Version:   11.14.2
+[debug] [2022-10-13T14:12:16.890Z] Platform:      win32
+[debug] [2022-10-13T14:12:16.890Z] Node Version:  v16.17.0
+[debug] [2022-10-13T14:12:16.891Z] Time:          Thu Oct 13 2022 16:12:16 GMT+0200 (Central European Summer Time)
+[debug] [2022-10-13T14:12:16.892Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-13T14:12:16.964Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-13T14:12:16.964Z] > authorizing via signed-in user (letsdevelopthatapp@gmail.com)
+[debug] [2022-10-13T14:12:16.964Z] [iam] checking project fb-clone-5e184 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-10-13T14:12:16.967Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/fb-clone-5e184:testIamPermissions [none]
+[debug] [2022-10-13T14:12:16.967Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/fb-clone-5e184:testIamPermissions x-goog-quota-user=projects/fb-clone-5e184
+[debug] [2022-10-13T14:12:16.967Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fb-clone-5e184:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-13T14:12:17.937Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/fb-clone-5e184:testIamPermissions 200
+[debug] [2022-10-13T14:12:17.938Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fb-clone-5e184:testIamPermissions {}
+[debug] [2022-10-13T14:12:17.938Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project fb-clone-5e184:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2022-10-13T14:12:17.941Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fb-clone-5e184 [none]
+[debug] [2022-10-13T14:12:18.265Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fb-clone-5e184 403
+[debug] [2022-10-13T14:12:18.265Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fb-clone-5e184 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2022-10-13T14:12:18.267Z] HTTP Error: 403, The caller does not have permission
+[debug] [2022-10-13T14:12:18.322Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\19mat\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\19mat\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project fb-clone-5e184. Please make sure the project exists and your account has permission to access it.
+[debug] [2022-10-13T15:13:38.759Z] ----------------------------------------------------------------------
+[debug] [2022-10-13T15:13:38.762Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\19mat\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-10-13T15:13:38.763Z] CLI Version:   11.14.2
+[debug] [2022-10-13T15:13:38.763Z] Platform:      win32
+[debug] [2022-10-13T15:13:38.763Z] Node Version:  v16.17.0
+[debug] [2022-10-13T15:13:38.765Z] Time:          Thu Oct 13 2022 17:13:38 GMT+0200 (Central European Summer Time)
+[debug] [2022-10-13T15:13:38.765Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-13T15:13:38.874Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-13T15:13:38.875Z] > authorizing via signed-in user (letsdevelopthatapp@gmail.com)
+[debug] [2022-10-13T15:13:38.876Z] [iam] checking project fb-clone-5e184 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-10-13T15:13:38.880Z] > refreshing access token with scopes: []
+[debug] [2022-10-13T15:13:38.884Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-10-13T15:13:38.885Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-13T15:13:39.045Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-10-13T15:13:39.045Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-13T15:13:39.060Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/fb-clone-5e184:testIamPermissions [none]
+[debug] [2022-10-13T15:13:39.060Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/fb-clone-5e184:testIamPermissions x-goog-quota-user=projects/fb-clone-5e184
+[debug] [2022-10-13T15:13:39.061Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fb-clone-5e184:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-13T15:13:39.860Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/fb-clone-5e184:testIamPermissions 200
+[debug] [2022-10-13T15:13:39.860Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fb-clone-5e184:testIamPermissions {}
+[debug] [2022-10-13T15:13:39.861Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project fb-clone-5e184:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2022-10-13T15:13:39.863Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fb-clone-5e184 [none]
+[debug] [2022-10-13T15:13:40.160Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fb-clone-5e184 403
+[debug] [2022-10-13T15:13:40.160Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fb-clone-5e184 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2022-10-13T15:13:40.162Z] HTTP Error: 403, The caller does not have permission
+[debug] [2022-10-13T15:13:40.225Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\19mat\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\19mat\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project fb-clone-5e184. Please make sure the project exists and your account has permission to access it.
