@@ -1,5 +1,5 @@
 .header {
-  padding: 15px 20px;
+  padding: 1% 2%;
   display: flex;
   justify-content: space-between;
 
@@ -21,13 +21,13 @@
   display: flex;
   align-items: center;
   background-color: #eff2f5;
-  padding: 10px;
-  margin-left: 10px;
-  border-radius: 999px;
+  padding: 1.4%;
+  margin-left: 1.4%;
+  border-radius: 1rem;
 }
 
 .header__left > img {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .header__input > input {

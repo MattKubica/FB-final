@@ -5,7 +5,7 @@
 }
 
 .login > button {
-  width: 300px;
+  width: 18rem;
   background-color: #2e81f4;
 
   color: #eff2f5;
@@ -19,7 +19,7 @@ login > button:hover {
 
 .login > div > img {
   object-fit: contain;
-  height: 150px;
+  height: 13rem;
 }
 .login > div {
   display: flex;

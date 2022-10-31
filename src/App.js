@@ -1,11 +1,11 @@
-import React from 'react';
-import './App.css';
-import Feed from './components/Feed/Feed';
-import Header from './components/Header/Header';
-import Login from './components/Login/Login';
-import Sidebar from './components/Sidebar/Sidebar';
-import Widgets from './components/Widgets/Widgets';
-import { useStateValue } from './StateProvider';
+import React from "react";
+import "./App.css";
+import Header from "./components/Header/Header";
+import Login from "./components/Login/Login";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Widgets from "./components/Widgets/Widgets";
+import { useStateValue } from "./StateProvider";
+import PageDeploy from "./components/Feed/PageDeploy";
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -19,7 +19,7 @@ function App() {
           <Header />
           <div className="app__body">
             <Sidebar />
-            <Feed />
+            <PageDeploy />
             <Widgets />
           </div>
         </>

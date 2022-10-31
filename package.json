@@ -13,7 +13,9 @@
     "firebase-admin": "^11.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-router-dom": "^6.4.2",
+    "react-scripts": "3.4.3",
+    "react-slide-routes": "^2.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
