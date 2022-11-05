@@ -1,6 +1,7 @@
 .sidebar {
   padding: 1.7rem 0.6rem;
   flex: 0.33;
+  width: 100%;
 }
 .navbar{
   text-decoration: none;

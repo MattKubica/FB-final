@@ -6,11 +6,6 @@ import * as serviceWorker from "./serviceWorker";
 import { StateProvider } from "./StateProvider";
 import reducer, { initialState } from "./reducer";
 
-<meta
-  name="google-site-verification"
-  content="zIVvcRlQ1_8sPNS6v9W8Z9w_EMFzr67ttGzxZjEcnzc"
-/>;
-
 ReactDOM.render(
   <React.StrictMode>
     <StateProvider

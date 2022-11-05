@@ -16,10 +16,14 @@ function App() {
         <Login />
       ) : (
         <>
-          <Header />
+          <div className="app__header">
+            <Header />
+          </div>
           <div className="app__body">
             <Sidebar />
-            <PageDeploy />
+            <div className="body__center">
+              <PageDeploy />
+            </div>
             <Widgets />
           </div>
         </>
