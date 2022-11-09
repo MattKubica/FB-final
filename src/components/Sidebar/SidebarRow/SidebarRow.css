@@ -3,15 +3,16 @@
   align-items: center;
   padding: 2%;
   cursor: pointer;
+  width: auto;
 }
 
 .sidebarRow:hover {
   background-color: lightgray;
-  border-radius: 10px;
+  border-radius: 5rem;
 }
 .sidebarRow.active{
   background-color: gray;
-  border-radius: 10px;
+  border-radius: 5rem;
  }
 
 .sidebarRow > h4 {
