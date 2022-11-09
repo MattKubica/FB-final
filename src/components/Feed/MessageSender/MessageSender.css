@@ -5,7 +5,7 @@
   background-color: #fff;
   border-radius: 1.2rem;
   box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
-  width: 100%;
+  width: auto;
 }
 
 .messageSender__top {
@@ -23,8 +23,8 @@
   outline-width: 0;
   border: none;
   padding: 0.7% 2% ;
-  margin: 0 10px;
-  border-radius: 999px;
+  margin: 0% 2%;
+  border-radius: 20rem;
   background-color: #eff2f5;
 }
 
@@ -34,6 +34,7 @@
 
 .messageSender__input {
   flex: 1;
+  width: auto;
 }
 
 .messageSender__bottom {
@@ -50,7 +51,7 @@
 }
 
 .messageSender__option > h3 {
-  font-size: medium;
+  font-size: smaller;
   margin-left: 2%;
   cursor: pointer;
 }
