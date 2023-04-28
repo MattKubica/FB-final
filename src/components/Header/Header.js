@@ -1,21 +1,20 @@
-import React from 'react';
-import './Header.css';
-import SearchIcon from '@material-ui/icons/Search';
-import HomeIcon from '@material-ui/icons/Home';
-import FlagIcon from '@material-ui/icons/Flag';
-import SubscriptionsOutlinedIcon from '@material-ui/icons/SubscriptionsOutlined';
-import StorefrontOutlinedIcon from '@material-ui/icons/StorefrontOutlined';
-import SupervisedUserCirceIcon from '@material-ui/icons/SupervisedUserCircle';
-import { Avatar, IconButton } from '@material-ui/core';
-import AddIcon from '@material-ui/icons/Add';
-import ForumIcon from '@material-ui/icons/Forum';
-import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { useStateValue } from '../../StateProvider';
+import React from "react";
+import "./Header.css";
+import SearchIcon from "@material-ui/icons/Search";
+import HomeIcon from "@material-ui/icons/Home";
+import FlagIcon from "@material-ui/icons/Flag";
+import SubscriptionsOutlinedIcon from "@material-ui/icons/SubscriptionsOutlined";
+import StorefrontOutlinedIcon from "@material-ui/icons/StorefrontOutlined";
+import SupervisedUserCircleIcon from "@material-ui/icons/SupervisedUserCircle";
+import { Avatar, IconButton } from "@material-ui/core";
+import AddIcon from "@material-ui/icons/Add";
+import ForumIcon from "@material-ui/icons/Forum";
+import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { useStateValue } from "../../StateProvider";
 
-
-function Header() {
-  const [{user} , dispatch] = useStateValue();
+function Header({ onRouteChange }) {
+  const [{ user }, dispatch] = useStateValue();
 
   return (
     <div className="header">
@@ -26,29 +25,42 @@ function Header() {
         />
         <div className="header__input">
           <SearchIcon />
-          <input placeholder="Search Facebook" type="text" />
+          <input
+            placeholder="Search Facebook"
+            type="text"
+          />
         </div>
       </div>
       <div className="header__center">
-        <div className="header__option header__option--active">
+        <a
+          className="header__option header__option--active"
+          onClick={() => onRouteChange("pages")}>
           <HomeIcon fontSize="large" />
-        </div>
-        <div className="header__option">
+        </a>
+        <a
+          className="header__option"
+          onClick={() => onRouteChange("pages")}>
           <FlagIcon fontSize="large" />
-        </div>
-        <div className="header__option">
+        </a>
+        <a
+          className="header__option"
+          onClick={() => onRouteChange("videos")}>
           <SubscriptionsOutlinedIcon fontSize="large" />
-        </div>
-        <div className="header__option">
+        </a>
+        <a
+          className="header__option"
+          onClick={() => onRouteChange("marketplace")}>
           <StorefrontOutlinedIcon fontSize="large" />
-        </div>
-        <div className="header__option">
-          <SupervisedUserCirceIcon fontSize="large" />
-        </div>
+        </a>
+        <a
+          className="header__option"
+          onClick={() => onRouteChange("friends")}>
+          <SupervisedUserCircleIcon fontSize="large" />
+        </a>
       </div>
       <div className="header__right">
         <div className="header__info">
-          <Avatar src={user.photoURL}/>
+          <Avatar src={user.photoURL} />
           <h4>{user.displayName}</h4>
         </div>
         <IconButton>

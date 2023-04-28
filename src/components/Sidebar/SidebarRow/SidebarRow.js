@@ -1,7 +1,7 @@
-import React from 'react';
-import { Avatar } from '@material-ui/core';
+import React from "react";
+import { Avatar } from "@material-ui/core";
 
-import './SidebarRow.css';
+import "./SidebarRow.css";
 
 function SidebarRow({ src, Icon, title }) {
   return (
@@ -9,7 +9,7 @@ function SidebarRow({ src, Icon, title }) {
       {src && <Avatar src={src} />}
       {Icon && <Icon />}
 
-      <h4>{title}</h4>
+      <p>{title}</p>
     </div>
   );
 }

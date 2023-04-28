@@ -1,8 +1,8 @@
 import React from "react";
-export default function Messanger() {
+export default function Messenger() {
   return (
     <div>
-      <h1>Messanger</h1>
+      <h1>Messenger</h1>
       <p>not featured</p>
     </div>
   );

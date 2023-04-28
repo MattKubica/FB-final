@@ -1,14 +1,17 @@
-.sidebar {
+:root {
+  --text-color: #333;
+  --link-color: #007bff;
+}
+
+.main-sidebar {
   padding: 1.7rem 0.6rem;
   flex: 0.33;
   width: 80%;
-}
-.navbar{
-  text-decoration: none;
-  color: inherit;
+  color: var(--text-color);
 }
 
-.router__link{
+.navbar,
+.router__link {
   text-decoration: none;
-  color: inherit;
+  color: var(--link-color);
 }

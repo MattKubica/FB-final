@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import SidebarRow from "./SidebarRow/SidebarRow";
 import "./Sidebar.css";
 import { ExpandMoreOutlined } from "@material-ui/icons";
@@ -12,7 +11,7 @@ import VideoLibraryIcon from "@material-ui/icons/VideoLibrary";
 import { useStateValue } from "../../StateProvider";
 import PersonalBanner from "./PersonalBanner";
 
-function Sidebar() {
+function Sidebar({ onRouteChange }) {
   const [{ user }, dispatch] = useStateValue();
   const prevent = (e) => {
     e.preventDefault();
@@ -22,84 +21,80 @@ function Sidebar() {
   }
 
   return (
-    <Router>
-      <div className="sidebar">
-        <SidebarRow
-          src={user.photoURL}
-          title={user.displayName}
-        />
-        <nav>
-          <ul>
-            <li>
-              <Link
-                className="router__link"
-                onClick={Hyperlink}>
-                <SidebarRow
-                  Icon={LocalHospitalIcon}
-                  title="COVID-19 Information Center"
-                />
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="router__link"
-                to={"../ListOfPages/Pages"}>
-                <SidebarRow
-                  Icon={EmojiFlagsIcon}
-                  title="Pages"
-                />
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="router__link"
-                to={"../ListOfPages/Messanger"}>
-                <SidebarRow
-                  Icon={ChatIcon}
-                  title="Messanger"
-                />
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="router__link"
-                to={"../ListOfPages/Friends"}>
-                <SidebarRow
-                  Icon={PeopleIcon}
-                  title="Friends"
-                />
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="router__link"
-                to={"../ListOfPages/Marketplace"}>
-                <SidebarRow
-                  Icon={StorefrontIcon}
-                  title="Marketplace"
-                />
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="router__link"
-                to={"../ListOfPages/Videos"}>
-                <SidebarRow
-                  Icon={VideoLibraryIcon}
-                  title="Videos"
-                />
-              </Link>
-            </li>
-          </ul>
-        </nav>
+    <div className="main-sidebar">
+      <SidebarRow
+        src={user.photoURL}
+        title={user.displayName}
+      />
+      <ul>
+        <p>
+          <a
+            href="#"
+            onClick={Hyperlink}>
+            <SidebarRow
+              Icon={LocalHospitalIcon}
+              title="COVID-19 Information Center"
+            />
+          </a>
+        </p>
+        <p>
+          <a
+            href="#"
+            onClick={() => onRouteChange("pages")}>
+            <SidebarRow
+              Icon={EmojiFlagsIcon}
+              title="Pages"
+            />
+          </a>
+        </p>
+        <p>
+          <a
+            href="#"
+            onClick={() => onRouteChange("messenger")}>
+            <SidebarRow
+              Icon={ChatIcon}
+              title="Messanger"
+            />
+          </a>
+        </p>
+        <p>
+          <a
+            href="#"
+            onClick={() => onRouteChange("friends")}>
+            <SidebarRow
+              Icon={PeopleIcon}
+              title="Friends"
+            />
+          </a>
+        </p>
+        <p>
+          <a
+            href="#"
+            onClick={() => onRouteChange("marketplace")}>
+            <SidebarRow
+              Icon={StorefrontIcon}
+              title="Marketplace"
+            />
+          </a>
+        </p>
+        <p>
+          <a
+            href="#"
+            onClick={() => onRouteChange("videos")}>
+            <SidebarRow
+              Icon={VideoLibraryIcon}
+              title="Videos"
+            />
+          </a>
+        </p>
+      </ul>
 
-        <SidebarRow
-          Icon={ExpandMoreOutlined}
-          title="More"
-        />
-        <PersonalBanner />
-      </div>
-    </Router>
+      <SidebarRow
+        Icon={ExpandMoreOutlined}
+        title="More"
+      />
+      <PersonalBanner />
+    </div>
   );
 }
 
