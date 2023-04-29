@@ -5,7 +5,6 @@ import { auth, provider } from './../../firebase';
 import { actionTypes } from '../../reducer';
 import { useStateValue } from '../../StateProvider';
 
-
 function Login() {
   const [state, dispatch] = useStateValue();
 
@@ -23,6 +22,22 @@ function Login() {
         alert(error.message);
       });
   };
+
+  const guestSignIn = () => {
+    auth
+      .signInAnonymously()
+      .then((result) => {
+        dispatch({
+          type: actionTypes.SET_USER,
+          user: result.user,
+        });
+        console.log(result);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
+
   return (
     <div className="login">
       <div className="login__logo">
@@ -37,6 +52,9 @@ function Login() {
       </div>
       <Button type="submit" onClick={signIn}>
         Sign In
+      </Button>
+      <Button type="submit" onClick={guestSignIn}>
+        Continue as Guest
       </Button>
     </div>
   );
