@@ -56,6 +56,7 @@ function Login() {
       <Button type="submit" onClick={guestSignIn}>
         Continue as Guest
       </Button>
+      <p>Not affiliated with Facebook. For portfolio demonstration only.</p>
     </div>
   );
 }

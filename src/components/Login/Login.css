@@ -25,3 +25,7 @@ login > button:hover {
   display: flex;
   flex-direction: column;
 }
+.login > p{
+  color: grey;
+  font-size: smaller;
+}
