@@ -29,6 +29,7 @@ function Sidebar({ onRouteChange }) {
       <ul>
         <p>
           <a
+            className="sidebar__link"
             href="#"
             onClick={Hyperlink}>
             <SidebarRow
@@ -39,6 +40,7 @@ function Sidebar({ onRouteChange }) {
         </p>
         <p>
           <a
+            className="sidebar__link"
             href="#"
             onClick={() => onRouteChange("pages")}>
             <SidebarRow
@@ -49,6 +51,7 @@ function Sidebar({ onRouteChange }) {
         </p>
         <p>
           <a
+            className="sidebar__link"
             href="#"
             onClick={() => onRouteChange("messenger")}>
             <SidebarRow
@@ -59,6 +62,7 @@ function Sidebar({ onRouteChange }) {
         </p>
         <p>
           <a
+            className="sidebar__link"
             href="#"
             onClick={() => onRouteChange("friends")}>
             <SidebarRow
@@ -69,6 +73,7 @@ function Sidebar({ onRouteChange }) {
         </p>
         <p>
           <a
+            className="sidebar__link"
             href="#"
             onClick={() => onRouteChange("marketplace")}>
             <SidebarRow
@@ -79,6 +84,7 @@ function Sidebar({ onRouteChange }) {
         </p>
         <p>
           <a
+            className="sidebar__link"
             href="#"
             onClick={() => onRouteChange("videos")}>
             <SidebarRow

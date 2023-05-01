@@ -15,3 +15,6 @@
   text-decoration: none;
   color: var(--link-color);
 }
+.sidebar__link{
+  text-decoration: none;
+}
