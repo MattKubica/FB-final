@@ -53,7 +53,7 @@ function Sidebar({ onRouteChange }) {
             onClick={() => onRouteChange("messenger")}>
             <SidebarRow
               Icon={ChatIcon}
-              title="Messanger"
+              title="Messenger"
             />
           </a>
         </p>

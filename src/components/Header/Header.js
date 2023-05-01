@@ -6,6 +6,7 @@ import FlagIcon from "@material-ui/icons/Flag";
 import SubscriptionsOutlinedIcon from "@material-ui/icons/SubscriptionsOutlined";
 import StorefrontOutlinedIcon from "@material-ui/icons/StorefrontOutlined";
 import SupervisedUserCircleIcon from "@material-ui/icons/SupervisedUserCircle";
+import ChatIcon from "@material-ui/icons/Chat";
 import { Avatar, IconButton } from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
 import ForumIcon from "@material-ui/icons/Forum";
@@ -13,7 +14,7 @@ import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { useStateValue } from "../../StateProvider";
 
-function Header({ onRouteChange }) {
+function Header({ onRouteChange, routeStatus }) {
   const [{ user }, dispatch] = useStateValue();
 
   return (
@@ -33,29 +34,44 @@ function Header({ onRouteChange }) {
       </div>
       <div className="header__center">
         <a
-          className="header__option header__option--active"
+          className={`header__option `}
           onClick={() => onRouteChange("pages")}>
           <HomeIcon fontSize="large" />
         </a>
         <a
-          className="header__option"
+          className={`header__option ${
+            routeStatus === "pages" ? "header__option--active" : ""
+          }`}
           onClick={() => onRouteChange("pages")}>
           <FlagIcon fontSize="large" />
         </a>
         <a
-          className="header__option"
-          onClick={() => onRouteChange("videos")}>
-          <SubscriptionsOutlinedIcon fontSize="large" />
+          className={`header__option ${
+            routeStatus === "messenger" ? "header__option--active" : ""
+          }`}
+          onClick={() => onRouteChange("messenger")}>
+          <ChatIcon fontSize="large" />
         </a>
         <a
-          className="header__option"
+          className={`header__option ${
+            routeStatus === "friends" ? "header__option--active" : ""
+          }`}
+          onClick={() => onRouteChange("friends")}>
+          <SupervisedUserCircleIcon fontSize="large" />
+        </a>
+        <a
+          className={`header__option ${
+            routeStatus === "marketplace" ? "header__option--active" : ""
+          }`}
           onClick={() => onRouteChange("marketplace")}>
           <StorefrontOutlinedIcon fontSize="large" />
         </a>
         <a
-          className="header__option"
-          onClick={() => onRouteChange("friends")}>
-          <SupervisedUserCircleIcon fontSize="large" />
+          className={`header__option ${
+            routeStatus === "videos" ? "header__option--active" : ""
+          }`}
+          onClick={() => onRouteChange("videos")}>
+          <SubscriptionsOutlinedIcon fontSize="large" />
         </a>
       </div>
       <div className="header__right">

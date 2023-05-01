@@ -4,6 +4,8 @@
   padding: 2%;
   cursor: pointer;
   width: auto;
+  text-decoration: none;
+  text-decoration-line: none;
 }
 
 .sidebarRow:hover {
@@ -15,9 +17,11 @@
   border-radius: 5rem;
  }
 
-.sidebarRow > h4 {
+.sidebarRow p {
   margin-left: 5%;
   font-weight: 600;
+  text-decoration: none;
+  font-size: medium;
 }
 
 .sidebarRow > .MuiSvgIcon-root {

@@ -13,6 +13,9 @@
   width: 100%;
 }
 
+.body__center {
+  width: 150rem;
+}
 .app__header {
   height: 1rem;
   margin-bottom: 5%;

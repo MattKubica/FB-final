@@ -40,7 +40,10 @@ function App() {
       ) : (
         <>
           <div className="app__header">
-            <Header onRouteChange={onRouteChange} />
+            <Header
+              onRouteChange={onRouteChange}
+              routeStatus={routeStatus}
+            />
           </div>
           <div className="app__body">
             <Sidebar onRouteChange={onRouteChange} />
