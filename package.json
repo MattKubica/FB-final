@@ -2,7 +2,7 @@
   "name": "fb-clone",
   "version": "0.11.0",
   "private": true,
-  "homepage": "fb-clone-831fc.web.app",
+  "homepage": "https://fb-clone-repo.onrender.com/",
   "dependencies": {
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
