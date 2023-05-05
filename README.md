@@ -1,6 +1,6 @@
 ### Facebook clone / React / Firebase
 
-Online @ https://fb-clone-5e184.web.app/
+Online @ https://fb-clone-repo.onrender.com/
 
 ⚙️ Technology:
 
@@ -9,11 +9,12 @@ Online @ https://fb-clone-5e184.web.app/
 
 ### Description:
 
-- I have build a "Facebook Clone with REACT JS for Beginners!" with Clever Programmer @ Youtube.
+- I have build a "Facebook Clone with REACT JS.
+Currently there's many features missing and hopefully they are gonna be implemented in future.
 
 - WORKS:
-  - Login with Google
-  - Ability to add comment wtih image (no upload only image url) to main wall visible to everyone.
+  - Login with Google || as a Guest.
+  - Ability to add comment wtih image url to main wall visible to everyone.
 
 - You need to provide your own firebaseConfig in `src/firebase.js`
 
@@ -33,9 +34,4 @@ Online @ https://fb-clone-5e184.web.app/
 - change `src/firebase.js` -> firebaseConfig to your own
 - npm run start
 
-### SOON
-
-- Want to close this version of app and start new one:
-  - Change Firebase with PostgreSQL and Auth0.
-  - Do some visual changes.
-  - Add more features like friendsBook, chatting...
+ Feel free to fork this project and customize it to your liking!
